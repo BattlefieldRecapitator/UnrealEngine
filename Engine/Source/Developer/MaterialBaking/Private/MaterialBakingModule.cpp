@@ -221,7 +221,7 @@ void FMaterialBakingModule::BakeMaterials(const TArray<FMaterialData*>& Material
 				}
 #endif // WITH_EDITOR
 			}
-			UE_LOG(LogTemp , Warning, TEXT("----------------------------------------Material %d / %d"), MaterialIndex, NumMaterials);
+			UE_LOG(LogTemp , Warning, TEXT("----------------------------------------Material %d / %d"), MaterialIndex + 1, NumMaterials);
 		}
 	}
 
