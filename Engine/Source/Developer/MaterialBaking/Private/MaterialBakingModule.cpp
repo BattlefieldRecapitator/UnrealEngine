@@ -207,7 +207,7 @@ void FMaterialBakingModule::BakeMaterials(const TArray<FMaterialData*>& Material
 						}
 #if WITH_EDITOR
 					// If saving intermediates is turned on
-					if (true/*bSaveIntermediateTextures*/)
+					if (bSaveIntermediateTextures)
 					{
 						const UEnum* PropertyEnum = StaticEnum<EMaterialProperty>();
 						FName PropertyName = PropertyEnum->GetNameByValue(Property);
@@ -221,7 +221,7 @@ void FMaterialBakingModule::BakeMaterials(const TArray<FMaterialData*>& Material
 				}
 #endif // WITH_EDITOR
 			}
-			UE_LOG(LogTemp , Warning, TEXT("----------------------------------------Material %d / %d"), MaterialIndex + 1, NumMaterials);
+			UE_LOG(LogTemp , Display, TEXT("----------------------------------------Material Baking: %d / %d"), MaterialIndex + 1, NumMaterials);
 		}
 	}
 
